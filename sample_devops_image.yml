@@ -29,13 +29,13 @@
     command: docker tag simple-devops-image ashishdevops/simple-devops-image
 
   - name: push image to docker hub 
-    command: docker push ashishdevops/simple-devops-image
+    shell: docker push ashishdevops/simple-devops-image
 
   - name: remove image from local  
     command: docker rmi ashishdevops/simple-devops-image simple-devops-image
 
   - name: pull image from docker hub  
-    command: docker pull ashishdevops/simple-devops-image
+    shell: docker pull ashishdevops/simple-devops-image
 
   - name: create container using simple-devops-image
     command: docker run -d --name simple-devops-container -p 8181:8080 ashishdevops/simple-devops-image
