@@ -29,7 +29,7 @@
     command: docker tag simple-devops-image ashishdevops/simple-devops-image
 
   - name: push image to docker hub 
-    shell: docker push ashishdevops/simple-devops-image
+    shell: "docker push ashishdevops/simple-devops-image"
 
   - name: remove image from local  
     command: docker rmi ashishdevops/simple-devops-image simple-devops-image
